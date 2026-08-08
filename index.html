@@ -2,126 +2,615 @@
 <html lang="es">
 <head>
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-CYFFMTFFCQ"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-CYFFMTFFCQ');
-</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-CYFFMTFFCQ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-CYFFMTFFCQ');
+  </script>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
   <meta name="description" content="Isla Merchant Solutions | Agente autorizado de IMS Puerto Rico. Optimización de costos de procesamiento de tarjetas para comercios en Puerto Rico.">
   <title>Isla Merchant Solutions | Optimización de Costos</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <style>
-    :root{
-      --navy:#151515; --red:#c9141d; --red-dark:#7f0b12; --red-soft:#fde8ea; --ink:#171717;
-      --muted:#666666; --light:#f4f8fc; --white:#fff; --line:#dedede;
-      --shadow:0 18px 50px rgba(7,26,51,.10); --radius:22px;
+    :root {
+      --navy: #151515;
+      --red: #c9141d;
+      --red-dark: #7f0b12;
+      --red-soft: #fde8ea;
+      --ink: #171717;
+      --muted: #666666;
+      --light: #f4f8fc;
+      --white: #fff;
+      --line: #dedede;
+      --shadow: 0 18px 50px rgba(7,26,51,.10);
+      --radius: 22px;
     }
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:#fff;line-height:1.6}
-    a{text-decoration:none;color:inherit}
-    .container{width:min(1120px,92%);margin:auto}
-    header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.92);backdrop-filter:blur(14px);border-bottom:1px solid rgba(223,232,242,.8)}
-    .nav{height:96px;display:flex;align-items:center;justify-content:space-between;gap:20px}
-    .brand{display:flex;align-items:center;gap:14px;font-weight:900;letter-spacing:-.03em}
-    .brand img{display:block;width:260px;height:auto;max-height:100px;object-fit:contain;object-position:left center}
-    .brand img{background:transparent!important;box-shadow:none!important;padding:0!important;border-radius:0!important;flex-shrink:0}
-    .brand-text{display:flex;flex-direction:column;line-height:1.15;justify-content:center}
-    .brand-text .ims{font-size:22px;font-weight:900;color:var(--red);letter-spacing:.02em}
-    .brand-text .pr{font-size:15px;font-weight:800;color:#171717;letter-spacing:.08em;text-transform:uppercase}
-    .brand small{display:block;color:var(--muted);font-size:10px;letter-spacing:.14em;text-transform:uppercase}
-    .links{display:flex;gap:22px;font-size:14px;font-weight:700;color:#333333;align-items:center}.links a{color:#333;padding:6px 2px}.links a:hover{color:var(--red)}
-    .links a:hover{color:var(--red)}
-    .nav-cta,.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;border-radius:12px;padding:12px 18px;font-weight:800;border:0;cursor:pointer}
-    .nav-cta{background:#0b1728;color:#fff}
-    .hero{background:
-      radial-gradient(circle at 85% 20%,rgba(201,20,29,.24),transparent 28%),
-      radial-gradient(circle at 10% 20%,rgba(201,20,29,.20),transparent 32%),
-      linear-gradient(135deg,#130607,#7f0b12 58%,#c9141d);
-      color:#fff;padding:92px 0 86px;overflow:hidden}
-    .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:55px;align-items:center}
-    .eyebrow{display:inline-flex;gap:8px;align-items:center;padding:7px 12px;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.08);border-radius:99px;font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
-    h1{font-size:clamp(42px,6vw,74px);line-height:.98;letter-spacing:-.055em;margin:22px 0}
-    .hero p{font-size:19px;color:#eeeeee;max-width:680px}
-    .actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
-    .btn-primary{background:#c9141d;color:#ffffff;box-shadow:0 14px 35px rgba(32,209,200,.22)}
-    .btn-ghost{border:1px solid rgba(255,255,255,.28);color:#fff;background:rgba(255,255,255,.07)}
-    .hero-card{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);border-radius:28px;padding:28px;box-shadow:0 25px 70px rgba(0,0,0,.18);backdrop-filter:blur(14px)}
-    .hero-card .big{font-size:58px;font-weight:950;line-height:1}
-    .hero-card .sub{color:#e5e5e5;margin:8px 0 25px}
-    .mini-row{display:flex;justify-content:space-between;gap:20px;padding:14px 0;border-top:1px solid rgba(255,255,255,.15);font-size:14px}
-    section{padding:86px 0}
-    .section-head{max-width:760px;margin-bottom:38px}
-    .kicker{color:var(--red);font-size:12px;font-weight:900;letter-spacing:.14em;text-transform:uppercase}
-    h2{font-size:clamp(31px,4vw,48px);line-height:1.05;letter-spacing:-.04em;margin:10px 0 14px}
-    .lead{font-size:18px;color:var(--muted)}
-    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-    .card{padding:28px;border:1px solid var(--line);border-radius:var(--radius);background:#fff;box-shadow:var(--shadow)}
-    .icon{width:44px;height:44px;border-radius:14px;background:#f7dadd;color:var(--red);display:grid;place-items:center;font-weight:900;margin-bottom:18px}
-    .card h3{margin:0 0 8px;font-size:20px}.card p{margin:0;color:var(--muted)}
-    .comparison{background:var(--light)}
-    .compare-wrap{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-    .compare-card{border-radius:26px;padding:30px;border:1px solid var(--line);background:#fff}
-    .compare-card.featured{border:2px solid var(--red);box-shadow:var(--shadow)}
-    .label{font-size:12px;font-weight:900;text-transform:uppercase;letter-spacing:.12em;color:var(--muted)}
-    .rate{font-size:48px;font-weight:950;letter-spacing:-.05em;margin:8px 0 2px}
-    .money{font-size:20px;font-weight:800}
-    .saving{margin-top:22px;padding:18px;border-radius:17px;background:#fde8ea;color:#9b1118;font-weight:900}
-    .checklist{list-style:none;padding:0;margin:22px 0 0}
-    .checklist li{padding:8px 0;color:#4a4a4a}.checklist li:before{content:"✓";color:#c9141d;font-weight:900;margin-right:10px}
-    .process{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
-    .step{padding:22px;border-radius:20px;background:#f7f7f7;border:1px solid var(--line)}
-    .num{width:34px;height:34px;border-radius:50%;background:var(--navy);color:#fff;display:grid;place-items:center;font-weight:900;margin-bottom:16px}
-    .step strong{display:block}.step span{color:var(--muted);font-size:14px}
-    .services{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-    .service-list{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-    .service{padding:18px;border:1px solid var(--line);border-radius:16px;background:#fff;font-weight:750}
-    .service:before{content:"✓";color:var(--red);margin-right:9px}
-    .clover{background:var(--navy);color:#fff;border-radius:30px;padding:48px}
-    .clover p{color:#dddddd}
-    .clover-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
-    .clover .checklist li{color:#e5e5e5}
-    .contact{background:linear-gradient(135deg,#111111,#2b2b2b 55%,#7f0b12);color:#fff}
-    .contact-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:35px;align-items:center}
-    .contact p{color:#e6e6e6}
-    .contact-card{background:#fff;color:var(--ink);padding:28px;border-radius:24px}
-    .contact-item{padding:14px 0;border-bottom:1px solid var(--line)}.contact-item:last-child{border:0}
-    .contact-item small{display:block;color:var(--muted);font-size:11px;font-weight:900;text-transform:uppercase;letter-spacing:.1em}
-    footer{padding:28px 0;background:#111111;color:#bdbdbd;font-size:13px}
-    .footer-row{display:flex;justify-content:space-between;gap:20px;align-items:center}
-    .whatsapp{position:fixed;right:22px;bottom:22px;z-index:30;width:62px;height:62px;border-radius:50%;background:#c9141d;color:#fff;display:grid;place-items:center;font-size:25px;font-weight:900;box-shadow:0 15px 35px rgba(0,0,0,.25)}
-    .note{font-size:12px;color:var(--muted);margin-top:24px}
-    @media(max-width:980px){
-      .links{gap:14px;font-size:13px}
-      .brand-text .ims{font-size:15px}
-      .brand-text .pr{font-size:11px}
-      .hero-grid,.contact-grid,.clover-grid,.services,.compare-wrap{grid-template-columns:1fr}
-      .cards{grid-template-columns:1fr}.process{grid-template-columns:1fr 1fr}.service-list{grid-template-columns:1fr}
-      .hero{padding-top:65px}
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: linear-gradient(180deg, #f8f9fb 0%, #ffffff 40%, #f4f8fc 100%);
+      font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--ink);
+      background: #fff;
+      line-height: 1.6;
+      overflow-x: hidden;
+      width: 100%;
     }
-    @media(max-width:720px){
-      .links{display:none}
+    a { text-decoration: none; color: inherit; }
+    img { max-width: 100%; height: auto; display: block; }
+
+    .container {
+      width: min(1180px, 94%);
+      margin: 0 auto;
+      padding-left: 0;
+      padding-right: 0;
     }
-    @media(max-width:560px){
-      .brand img{width:200px;max-height:85px}
-      section{padding:65px 0}.process{grid-template-columns:1fr}.nav-cta{padding:10px 13px;font-size:13px}
-      .hero-card .big{font-size:48px}.clover{padding:30px}.footer-row{flex-direction:column;align-items:flex-start}
+
+    /* HEADER */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(255,255,255,0.72);
+      backdrop-filter: blur(22px);
+      -webkit-backdrop-filter: blur(22px);
+      border-bottom: 1px solid rgba(223,232,242,.8);
+    }
+    .nav {
+      height: 96px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 900;
+      letter-spacing: -.03em;
+      flex-shrink: 0;
+    }
+    .brand img {
+      display: block;
+      width: 220px;
+      max-width: 55vw;
+      height: auto;
+      max-height: 90px;
+      object-fit: contain;
+      object-position: left center;
+    }
+    .links {
+      display: flex;
+      gap: 22px;
+      font-size: 14px;
+      font-weight: 700;
+      color: #333;
+      align-items: center;
+    }
+    .links a { color: #333; padding: 6px 2px; transition: color .2s; }
+    .links a:hover { color: var(--red); }
+    .nav-cta, .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      border-radius: 999px;
+      padding: 12px 18px;
+      font-weight: 800;
+      border: 0;
+      cursor: pointer;
+      transition: all .25s ease;
+    }
+    .nav-cta {
+      background: var(--red) !important;
+      color: #fff;
+      white-space: nowrap;
+      border-radius: 999px;
+      padding: 12px 22px;
+    }
+    .nav-cta:hover { background: #9b1118 !important; }
+
+    /* HERO */
+    .hero {
+      background:
+        radial-gradient(circle at 85% 20%, rgba(201,20,29,.24), transparent 28%),
+        radial-gradient(circle at 10% 20%, rgba(201,20,29,.20), transparent 32%),
+        linear-gradient(135deg, #130607, #7f0b12 58%, #c9141d);
+      color: #fff;
+      padding: 92px 0 86px;
+      overflow: hidden;
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap: 40px;
+      align-items: center;
+    }
+    .eyebrow {
+      display: inline-flex;
+      gap: 8px;
+      align-items: center;
+      padding: 7px 12px;
+      border: 1px solid rgba(255,255,255,.2);
+      background: rgba(255,255,255,.08);
+      border-radius: 99px;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+    h1 {
+      font-size: clamp(32px, 5.5vw, 58px);
+      line-height: 1.05;
+      letter-spacing: -.04em;
+      margin: 18px 0 16px;
+    }
+    .hero p {
+      font-size: clamp(16px, 2.2vw, 19px);
+      color: #eeeeee;
+      max-width: 580px;
+    }
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 28px;
+    }
+    .btn-primary {
+      background: var(--red);
+      color: #fff;
+      box-shadow: 0 14px 35px rgba(201,20,29,.25);
+    }
+    .btn-primary:hover {
+      background: #9b1118;
+      transform: translateY(-2px);
+    }
+    .btn-ghost {
+      border: 1px solid rgba(255,255,255,.28);
+      color: #fff;
+      background: rgba(255,255,255,.07);
+    }
+    .btn-ghost:hover {
+      background: rgba(255,255,255,.14);
+    }
+    .hero-card {
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.28);
+      border-radius: 28px;
+      padding: 30px;
+      box-shadow: 0 30px 80px rgba(0,0,0,0.28);
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+    }
+    .hero-card .big {
+      font-size: clamp(42px, 8vw, 58px);
+      font-weight: 950;
+      line-height: 1;
+    }
+    .hero-card .sub {
+      color: #e5e5e5;
+      margin: 8px 0 22px;
+      font-size: 14px;
+    }
+    .mini-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 12px 0;
+      border-top: 1px solid rgba(255,255,255,.15);
+      font-size: 14px;
+    }
+
+    /* SECTIONS */
+    section { padding: 80px 0; }
+    .section-head {
+      max-width: 760px;
+      margin-bottom: 36px;
+    }
+    .kicker {
+      color: var(--red);
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+    }
+    h2 {
+      font-size: clamp(26px, 4vw, 42px);
+      line-height: 1.1;
+      letter-spacing: -.03em;
+      margin: 10px 0 14px;
+    }
+    .lead {
+      font-size: clamp(15px, 2vw, 18px);
+      color: var(--muted);
+    }
+
+    /* CARDS */
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+    .card {
+      padding: 28px;
+      border: 1px solid rgba(255,255,255,0.65);
+      border-radius: var(--radius);
+      background: rgba(255,255,255,0.55);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      box-shadow: 0 20px 50px rgba(7,26,51,0.12);
+      transition: transform .35s ease, box-shadow .35s ease, background .35s ease;
+    }
+    .card:hover {
+      background: rgba(255,255,255,0.72);
+      box-shadow: 0 28px 60px rgba(7,26,51,0.16);
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 22px 50px rgba(7,26,51,.14);
+    }
+    .icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 14px;
+      background: #f7dadd;
+      color: var(--red);
+      display: grid;
+      place-items: center;
+      font-weight: 900;
+      margin-bottom: 16px;
+    }
+    .card h3 { margin: 0 0 8px; font-size: 19px; }
+    .card p { margin: 0; color: var(--muted); font-size: 15px; }
+
+    /* COMPARISON */
+    .comparison { 
+      background: linear-gradient(180deg, #eef3f9 0%, #f4f8fc 100%);
+    }
+    .compare-wrap {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+    .compare-card {
+      border-radius: 26px;
+      padding: 28px;
+      border: 1px solid rgba(255,255,255,0.6);
+      background: rgba(255,255,255,0.55);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      transition: transform .3s ease, background .3s ease;
+      box-shadow: 0 18px 45px rgba(7,26,51,0.08);
+    }
+    .compare-card:hover {
+      background: rgba(255,255,255,0.75);
+    }
+    .compare-card:hover { transform: translateY(-4px); }
+    .compare-card.featured {
+      border: 2px solid var(--red);
+      box-shadow: var(--shadow);
+    }
+    .label {
+      font-size: 12px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: .12em;
+      color: var(--muted);
+    }
+    .rate {
+      font-size: clamp(36px, 7vw, 48px);
+      font-weight: 950;
+      letter-spacing: -.05em;
+      margin: 8px 0 2px;
+    }
+    .saving {
+      margin-top: 20px;
+      padding: 16px;
+      border-radius: 17px;
+      background: #fde8ea;
+      color: #9b1118;
+      font-weight: 900;
+      font-size: 14px;
+      text-align: center;
+    }
+    .checklist { list-style: none; padding: 0; margin: 18px 0 0; }
+    .checklist li {
+      padding: 7px 0;
+      color: #4a4a4a;
+      font-size: 15px;
+    }
+    .checklist li:before {
+      content: "✓";
+      color: #c9141d;
+      font-weight: 900;
+      margin-right: 10px;
+    }
+
+    /* CLOVER */
+    .clover {
+      background: rgba(8, 8, 8, 0.92);
+      backdrop-filter: blur(22px);
+      -webkit-backdrop-filter: blur(22px);
+      color: #fff;
+      border-radius: 30px;
+      padding: 44px;
+      border: 1px solid rgba(255,255,255,0.08);
+      box-shadow: 0 25px 60px rgba(0,0,0,0.35);
+    }
+    .clover p { color: #dddddd; }
+    .clover-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 36px;
+      align-items: center;
+    }
+    .clover .checklist li { color: #e5e5e5; }
+
+    /* SERVICES */
+    .service-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+    .service {
+      padding: 16px 18px;
+      border: 1px solid rgba(255,255,255,0.5);
+      border-radius: 16px;
+      background: rgba(255,255,255,0.55);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      font-weight: 750;
+      font-size: 14.5px;
+      transition: transform .25s ease, border-color .25s ease, background .25s ease;
+      box-shadow: 0 8px 25px rgba(7,26,51,0.06);
+    }
+    .service:hover {
+      background: rgba(255,255,255,0.8);
+    }
+    .service:hover {
+      transform: translateY(-3px);
+      border-color: rgba(201,20,29,.3);
+    }
+    .service:before {
+      content: "✓";
+      color: var(--red);
+      margin-right: 9px;
+    }
+
+    /* PROCESS */
+    .process {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 12px;
+    }
+    .step {
+      padding: 20px 14px;
+      border-radius: 20px;
+      background: rgba(255,255,255,0.55);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255,255,255,0.5);
+      transition: transform .25s ease, background .25s ease;
+      box-shadow: 0 8px 25px rgba(7,26,51,0.06);
+    }
+    .step:hover {
+      background: rgba(255,255,255,0.8);
+    }
+    .step:hover { transform: translateY(-3px); }
+    .num {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background: var(--navy);
+      color: #fff;
+      display: grid;
+      place-items: center;
+      font-weight: 900;
+      margin-bottom: 14px;
+      font-size: 14px;
+    }
+    .step strong { display: block; font-size: 14px; }
+    .step span { color: var(--muted); font-size: 13px; }
+
+    /* CONTACT */
+    .contact {
+      background: linear-gradient(135deg, #111111, #2b2b2b 55%, #7f0b12);
+      color: #fff;
+    }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 32px;
+      align-items: center;
+    }
+    .contact p { color: #e6e6e6; }
+    .contact-card {
+      background: rgba(255,255,255,0.85);
+      backdrop-filter: blur(22px);
+      -webkit-backdrop-filter: blur(22px);
+      color: var(--ink);
+      padding: 28px;
+      border-radius: 24px;
+      border: 1px solid rgba(255,255,255,0.55);
+      box-shadow: 0 25px 60px rgba(0,0,0,0.3);
+    }
+    .contact-item {
+      padding: 13px 0;
+      border-bottom: 1px solid var(--line);
+    }
+    .contact-item:last-child { border: 0; }
+    .contact-item small {
+      display: block;
+      color: var(--muted);
+      font-size: 11px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+    }
+
+    /* FOOTER */
+    footer {
+      padding: 26px 0;
+      background: #111111;
+      color: #bdbdbd;
+      font-size: 13px;
+    }
+    .footer-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    /* WHATSAPP */
+    .whatsapp {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      z-index: 30;
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      background: #25D366;
+      color: #fff;
+      display: grid;
+      place-items: center;
+      box-shadow: 0 12px 30px rgba(0,0,0,.25);
+      transition: transform .25s ease;
+    }
+    .whatsapp:hover { transform: scale(1.08); }
+
+    .note {
+      font-size: 12px;
+      color: var(--muted);
+      margin-top: 22px;
+    }
+
+    /* ANIMATIONS */
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity .7s cubic-bezier(0.22, 1, 0.36, 1),
+                  transform .7s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .delay-1 { transition-delay: .1s; }
+    .delay-2 { transition-delay: .2s; }
+    .delay-3 { transition-delay: .3s; }
+
+    /* ========== RESPONSIVE PERFECTO ========== */
+    @media (max-width: 980px) {
+      .hero-grid,
+      .contact-grid,
+      .clover-grid,
+      .compare-wrap {
+        grid-template-columns: 1fr;
+      }
+      .cards { grid-template-columns: 1fr 1fr; }
+      .process { grid-template-columns: 1fr 1fr; }
+      .service-list { grid-template-columns: 1fr; }
+      .hero { padding: 70px 0 60px; }
+      .clover { padding: 32px 24px; }
+      section { padding: 64px 0; }
+    }
+
+    @media (max-width: 720px) {
+      .brand-text { display: none; }
+      .links { display: none; }
+      .nav { height: 78px; }
+      .brand img {
+        width: 180px;
+        max-height: 70px;
+      }
+      .cards { grid-template-columns: 1fr; }
+      .process { grid-template-columns: 1fr; }
+      .nav-cta {
+        padding: 10px 14px;
+        font-size: 13px;
+      }
+      .hero-card .big { font-size: 44px; }
+      .footer-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+      }
+      h1 { font-size: clamp(28px, 7vw, 40px); }
+      section { padding: 56px 0; }
+    }
+
+    @media (max-width: 480px) {
+      .container { width: 96%; }
+      .brand img {
+        width: 150px;
+        max-height: 58px;
+      }
+      .nav { height: 70px; }
+      .hero { padding: 50px 0 48px; }
+      .actions { flex-direction: column; }
+      .btn, .nav-cta { width: 100%; justify-content: center; }
+      .whatsapp {
+        width: 52px;
+        height: 52px;
+        right: 14px;
+        bottom: 14px;
+      }
+    }
+
+    /* Landscape phone / small tablets */
+    @media (max-height: 500px) and (orientation: landscape) {
+      .hero { padding: 40px 0; }
+      .nav { height: 64px; }
+      section { padding: 40px 0; }
     }
   
-
-    @media (prefers-reduced-motion: reduce){
+    /* Animación botón WhatsApp / nav-cta */
+    @keyframes softPulse {
+      0%, 100% { box-shadow: 0 4px 18px rgba(201, 20, 29, 0.35); }
+      50% { box-shadow: 0 6px 28px rgba(201, 20, 29, 0.55); }
     }
-    .links a:hover{color:var(--red)}
-    .links a:first-child{color:var(--red)}
-    .btn-primary{background:var(--red);color:#fff}
-    .btn-primary:hover{background:#9b1118}
-    .nav-cta{background:var(--red)!important}
-    .whatsapp{background:#25D366;color:#fff}
-</style>
+    .nav-cta {
+      animation: softPulse 2.4s ease-in-out infinite;
+      transition: transform 0.25s ease, background 0.25s ease, box-shadow 0.25s ease;
+    }
+    .nav-cta:hover {
+      animation: none;
+      transform: translateY(-2px) scale(1.04);
+      box-shadow: 0 10px 30px rgba(201, 20, 29, 0.5) !important;
+    }
+
+  
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.15;
+      justify-content: center;
+      margin-left: 4px;
+    }
+    .brand-text .ims {
+      font-size: 20px;
+      font-weight: 900;
+      color: var(--red);
+      letter-spacing: 0.02em;
+    }
+    .brand-text .pr {
+      font-size: 13px;
+      font-weight: 800;
+      color: #171717;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+  </style>
 </head>
 <body>
 <header>
@@ -134,189 +623,222 @@
       </span>
     </a>
     <nav class="links">
-      <a href="#soluciones">Soluciones</a><a href="#comparativa">Comparativa</a><a href="#servicios">Servicios</a><a href="#proceso">Proceso</a><a href="#contacto">Contacto</a>
+      <a href="#soluciones">Soluciones</a>
+      <a href="#comparativa">Comparativa</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#proceso">Proceso</a>
+      <a href="#contacto">Contacto</a>
     </nav>
     <a class="nav-cta" href="https://wa.me/17875460205?text=Hola%20David%2C%20me%20interesa%20una%20evaluaci%C3%B3n%20confidencial%20de%20mis%20costos%20de%20procesamiento." target="_blank" rel="noopener">WhatsApp</a>
   </div>
 </header>
 
 <main id="inicio">
-<section class="hero">
-  <div class="container hero-grid">
-    <div>
-      <span class="eyebrow">Optimización de costos de procesamiento</span>
-      <h1>Haz que cada transacción trabaje mejor para tu negocio.</h1>
-      <p>Como agente autorizado de <strong>IMS Puerto Rico</strong>, ayudamos a comercios a optimizar sus costos de procesamiento con una estructura Interchange Plus transparente y soluciones modernas de cobro.</p>
-      <div class="actions">
-        <a class="btn btn-primary" href="https://wa.me/17875460205?text=Hola%20David%2C%20quiero%20evaluar%20mis%20costos%20de%20procesamiento." target="_blank" rel="noopener">Evaluación por WhatsApp →</a>
-        <a class="btn btn-ghost" href="mailto:david@imspuertorico.com?subject=Solicitud%20de%20evaluaci%C3%B3n">Enviar email</a>
-      </div>
-    </div>
-    <div class="hero-card">
-      <div class="label" style="color:#ffffff">Reducción potencial</div>
-      <div class="big">30–50%</div>
-      <div class="sub">según la estructura y volumen actual del comercio</div>
-      <div class="mini-row"><span>Modelo</span><strong>Interchange Plus</strong></div>
-      <div class="mini-row"><span>Atención</span><strong>Español e inglés</strong></div>
-      <div class="mini-row"><span>Soporte</span><strong>Local en Puerto Rico</strong></div>
-    </div>
-  </div>
-</section>
-
-<section id="soluciones">
-  <div class="container">
-    <div class="section-head">
-      <div class="kicker">La propuesta</div>
-      <h2>Transparencia, control y ahorro.</h2>
-      <p class="lead">El objetivo es identificar oportunidades reales de reducción de costos sin sacrificar las herramientas que tu negocio necesita para cobrar y operar.</p>
-    </div>
-    <div class="cards">
-      <article class="card"><div class="icon">%</div><h3>Interchange Plus</h3><p>Markup fijo y claro de IMS más el Interchange variable según el tipo de tarjeta utilizada.</p></article>
-      <article class="card"><div class="icon">✓</div><h3>Sin márgenes ocultos</h3><p>Una estructura diseñada para que entiendas qué estás pagando y por qué.</p></article>
-      <article class="card"><div class="icon">30</div><h3>Reducción potencial 30%–50%</h3><p>En muchos casos se identifican oportunidades de ahorro significativas, siempre sujetas a la estructura y volumen actual del comercio.</p></article>
-    </div>
-    <p class="note">La reducción indicada es potencial y está sujeta a la validación de los estados de cuenta reales del comercio.</p>
-  </div>
-</section>
-
-<section class="comparison" id="comparativa">
-  <div class="container">
-    <div class="section-head">
-      <div class="kicker">Comparativa real</div>
-      <h2>Un ejemplo de optimización.</h2>
-      <p class="lead">Caso ilustrativo basado en las cifras incluidas en la propuesta de Isla Merchant Solutions.</p>
-    </div>
-    <div class="compare-wrap">
-      <div class="compare-card">
-        <div class="label">Situación actual</div>
-        <div class="rate">3.78%</div><div class="label">tasa efectiva</div>
-        <ul class="checklist">
-          <li>$6,300 / mes</li><li>$75,600 / año</li>
-        </ul>
-      </div>
-      <div class="compare-card featured">
-        <div class="label">Optimización IMS</div>
-        <div class="rate">2.69%</div><div class="label">tasa efectiva</div>
-        <ul class="checklist">
-          <li>$4,483 / mes</li><li>$53,796 / año</li>
-        </ul>
-        <div class="saving">−29% · $1,817 de ahorro mensual · $21,804 de ahorro anual</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section>
-  <div class="container">
-    <div class="clover">
-      <div class="clover-grid">
-        <div>
-          <div class="kicker" style="color:#c9141d">Equipos Clover</div>
-          <h2 style="margin-top:10px">Garantía y propiedad con una estructura clara.</h2>
-          <p>Proporcionamos terminales Clover de última generación con una estructura de garantía y propiedad diseñada para dar flexibilidad al comercio.</p>
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="reveal">
+        <span class="eyebrow">Optimización de costos de procesamiento</span>
+        <h1>Haz que cada transacción trabaje mejor para tu negocio.</h1>
+        <p>Como agente autorizado de <strong>IMS Puerto Rico</strong>, ayudamos a comercios a optimizar sus costos de procesamiento con una estructura Interchange Plus transparente y soluciones modernas de cobro.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="https://wa.me/17875460205?text=Hola%20David%2C%20quiero%20evaluar%20mis%20costos%20de%20procesamiento." target="_blank" rel="noopener">Evaluación por WhatsApp →</a>
+          <a class="btn btn-ghost" href="mailto:david@imspuertorico.com?subject=Solicitud%20de%20evaluaci%C3%B3n">Enviar email</a>
         </div>
-        <ul class="checklist">
-          <li>Opción de renovar equipos, actualizar modelos o cesar operaciones sin penalidades por contrato.</li>
-          <li>Cobertura completa de equipos durante los primeros 4 años de operación.</li>
-          <li>Garantía ilimitada durante 48 meses, según la propuesta.</li>
-          <li>Después de 48 meses, los terminales pasan a ser propiedad total del cliente.</li>
-          <li>Sin obligación futura con IMS por la propiedad del equipo una vez culminan los 48 meses.</li>
-        </ul>
+      </div>
+      <div class="hero-card reveal delay-2">
+        <div class="label" style="color:#ffffff">Reducción potencial</div>
+        <div class="big">30–50%</div>
+        <div class="sub">según la estructura y volumen actual del comercio</div>
+        <div class="mini-row"><span>Modelo</span><strong>Interchange Plus</strong></div>
+        <div class="mini-row"><span>Atención</span><strong>Español e inglés</strong></div>
+        <div class="mini-row"><span>Soporte</span><strong>Local en Puerto Rico</strong></div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section id="servicios">
-  <div class="container">
-    <div class="section-head">
-      <div class="kicker">Servicios incluidos</div>
-      <h2>Más que procesamiento de tarjetas.</h2>
-      <p class="lead">Herramientas y acompañamiento para modernizar la operación de cobro.</p>
+  <section id="soluciones">
+    <div class="container">
+      <div class="section-head reveal">
+        <div class="kicker">La propuesta</div>
+        <h2>Transparencia, control y ahorro.</h2>
+        <p class="lead">El objetivo es identificar oportunidades reales de reducción de costos sin sacrificar las herramientas que tu negocio necesita para cobrar y operar.</p>
+      </div>
+      <div class="cards">
+        <article class="card reveal delay-1">
+          <div class="icon">%</div>
+          <h3>Interchange Plus</h3>
+          <p>Markup fijo y claro de IMS más el Interchange variable según el tipo de tarjeta utilizada.</p>
+        </article>
+        <article class="card reveal delay-2">
+          <div class="icon">✓</div>
+          <h3>Sin márgenes ocultos</h3>
+          <p>Una estructura diseñada para que entiendas qué estás pagando y por qué.</p>
+        </article>
+        <article class="card reveal delay-3">
+          <div class="icon">30</div>
+          <h3>Reducción potencial 30%–50%</h3>
+          <p>En muchos casos se identifican oportunidades de ahorro significativas, siempre sujetas a la estructura y volumen actual del comercio.</p>
+        </article>
+      </div>
+      <p class="note reveal">La reducción indicada es potencial y está sujeta a la validación de los estados de cuenta reales del comercio.</p>
     </div>
-    <div class="service-list">
-      <div class="service">Dashboard en tiempo real</div>
-      <div class="service">Monitoreo de transacciones y reportes diarios</div>
-      <div class="service">Facturación e invoices en línea</div>
-      <div class="service">Aceptación de pagos</div>
-      <div class="service">Soporte para ATH Móvil</div>
-      <div class="service">Reportes personalizados para auditoría e impuestos</div>
-      <div class="service">Implementación sin interrupciones</div>
-      <div class="service">Migración rápida</div>
-      <div class="service">Capacitación de personal</div>
-      <div class="service">Soporte técnico local en Puerto Rico</div>
-      <div class="service">Visitas presenciales para capacitación y diagnóstico</div>
-      <div class="service">Atención en español e inglés</div>
-    </div>
-  </div>
-</section>
+  </section>
 
-
-<section id="confian" style="background:#f7f7f7">
-  <div class="container">
-    <div class="section-head" style="text-align:center;margin-left:auto;margin-right:auto">
-      <div class="kicker">Confianza local</div>
-      <h2>Comerciantes que <span style="color:var(--red)">confían en nosotros</span></h2>
-      <p class="lead">Algunos de los comercios en Puerto Rico que han confiado en nuestras soluciones de procesamiento.</p>
-    </div>
-    <div class="cards" style="grid-template-columns:repeat(3,1fr)">
-      <article class="card" style="text-align:center"><h3>Arecibo Home Design</h3><p>Comercio que confía en nuestras soluciones.</p></article>
-      <article class="card" style="text-align:center"><h3>Paradise Ceramics</h3><p>Comercio que confía en nuestras soluciones.</p></article>
-      <article class="card" style="text-align:center"><h3>GM &amp; More</h3><p>Comercio que confía en nuestras soluciones.</p></article>
-      <article class="card" style="text-align:center"><h3>JM Aluminum</h3><p>Comercio que confía en nuestras soluciones.</p></article>
-      <article class="card" style="text-align:center"><h3>Ace Hardware</h3><p>Comercio que confía en nuestras soluciones.</p></article>
-      <article class="card" style="text-align:center"><h3>Y muchos más</h3><p>Comercios de distintos sectores en toda la isla que han optimizado sus costos con nosotros.</p></article>
-    </div>
-  </div>
-</section>
-
-<section id="proceso" style="background:#f4f8fc">
-  <div class="container">
-    <div class="section-head">
-      <div class="kicker">Proceso de validación</div>
-      <h2>Simple, confidencial y directo.</h2>
-      <p class="lead">El primer paso es conocer cómo está funcionando actualmente tu procesamiento.</p>
-    </div>
-    <div class="process">
-      <div class="step"><div class="num">1</div><strong>Evaluación confidencial</strong><span>Revisión de tu merchant statement.</span></div>
-      <div class="step"><div class="num">2</div><strong>Análisis detallado</strong><span>Identificación de oportunidades.</span></div>
-      <div class="step"><div class="num">3</div><strong>Propuesta personalizada</strong><span>Presentación de la alternativa.</span></div>
-      <div class="step"><div class="num">4</div><strong>Piloto sin riesgo</strong><span>Validación de la solución.</span></div>
-      <div class="step"><div class="num">5</div><strong>Implementación rápida</strong><span>Migración y capacitación.</span></div>
-    </div>
-  </div>
-</section>
-
-<section id="contacto" class="contact">
-  <div class="container contact-grid">
-    <div>
-      <div class="kicker" style="color:#c9141d">Comienza aquí</div>
-      <h2>¿Quieres saber cuánto podrías ahorrar?</h2>
-      <p>Envíanos tu merchant statement para realizar una evaluación confidencial y preparar una propuesta personalizada. Trabajo como agente autorizado de <strong>IMS Puerto Rico</strong>.</p>
-      <div class="actions">
-        <a class="btn btn-primary" href="https://wa.me/17875460205?text=Hola%20David%2C%20quiero%20enviar%20mi%20merchant%20statement%20para%20una%20evaluaci%C3%B3n%20confidencial." target="_blank" rel="noopener">Hablar por WhatsApp</a>
-        <a class="btn btn-ghost" href="tel:+17875460205">Llamar ahora</a>
+  <section class="comparison" id="comparativa">
+    <div class="container">
+      <div class="section-head reveal">
+        <div class="kicker">Comparativa real</div>
+        <h2>Un ejemplo de optimización.</h2>
+        <p class="lead">Caso ilustrativo basado en las cifras incluidas en la propuesta de Isla Merchant Solutions.</p>
+      </div>
+      <div class="compare-wrap">
+        <div class="compare-card reveal delay-1">
+          <div class="label">Situación actual</div>
+          <div class="rate">3.78%</div>
+          <div class="label">tasa efectiva</div>
+          <ul class="checklist">
+            <li>$6,300 / mes</li>
+            <li>$75,600 / año</li>
+          </ul>
+        </div>
+        <div class="compare-card featured reveal delay-2">
+          <div class="label">Optimización IMS</div>
+          <div class="rate">2.69%</div>
+          <div class="label">tasa efectiva</div>
+          <ul class="checklist">
+            <li>$4,483 / mes</li>
+            <li>$53,796 / año</li>
+          </ul>
+          <div class="saving">−29% · $1,817 de ahorro mensual · $21,804 de ahorro anual</div>
+        </div>
       </div>
     </div>
-    <div class="contact-card">
-      <div class="contact-item"><small>Agente autorizado</small><strong>David López · IMS Puerto Rico</strong></div>
-      <div class="contact-item"><small>Teléfono / WhatsApp Business</small><strong>787-546-0205</strong></div>
-      <div class="contact-item"><small>Email</small><strong>david@imspuertorico.com</strong></div>
-      <div class="contact-item"><small>Ubicación</small><strong>San Juan, Puerto Rico</strong></div>
-      <div class="contact-item"><small>Empresa</small><strong><a href="https://www.imspuertorico.com" target="_blank" rel="noopener" style="color:var(--red);font-weight:800">IMS Puerto Rico →</a></strong></div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="clover reveal">
+        <div class="clover-grid">
+          <div>
+            <div class="kicker" style="color:#c9141d">Equipos Clover</div>
+            <h2 style="margin-top:10px;color:#fff">Garantía y propiedad con una estructura clara.</h2>
+            <p>Proporcionamos terminales Clover de última generación con una estructura de garantía y propiedad diseñada para dar flexibilidad al comercio.</p>
+          </div>
+          <ul class="checklist">
+            <li>Opción de renovar equipos, actualizar modelos o cesar operaciones sin penalidades por contrato.</li>
+            <li>Cobertura completa de equipos durante los primeros 4 años de operación.</li>
+            <li>Garantía ilimitada durante 48 meses, según la propuesta.</li>
+            <li>Después de 48 meses, los terminales pasan a ser propiedad total del cliente.</li>
+            <li>Sin obligación futura con IMS por la propiedad del equipo una vez culminan los 48 meses.</li>
+          </ul>
+        </div>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
+
+  <section id="servicios">
+    <div class="container">
+      <div class="section-head reveal">
+        <div class="kicker">Servicios incluidos</div>
+        <h2>Más que procesamiento de tarjetas.</h2>
+        <p class="lead">Herramientas y acompañamiento para modernizar la operación de cobro.</p>
+      </div>
+      <div class="service-list">
+        <div class="service reveal delay-1">Dashboard en tiempo real</div>
+        <div class="service reveal delay-1">Monitoreo de transacciones y reportes diarios</div>
+        <div class="service reveal delay-2">Facturación e invoices en línea</div>
+        <div class="service reveal delay-2">Aceptación de pagos</div>
+        <div class="service reveal delay-3">Soporte para ATH Móvil</div>
+        <div class="service reveal delay-3">Reportes personalizados para auditoría e impuestos</div>
+        <div class="service reveal delay-1">Implementación sin interrupciones</div>
+        <div class="service reveal delay-1">Migración rápida</div>
+        <div class="service reveal delay-2">Capacitación de personal</div>
+        <div class="service reveal delay-2">Soporte técnico local en Puerto Rico</div>
+        <div class="service reveal delay-3">Visitas presenciales para capacitación y diagnóstico</div>
+        <div class="service reveal delay-3">Atención en español e inglés</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="confian" style="background:#f7f7f7">
+    <div class="container">
+      <div class="section-head reveal" style="text-align:center;margin-left:auto;margin-right:auto">
+        <div class="kicker">Confianza local</div>
+        <h2>Comerciantes que <span style="color:var(--red)">confían en nosotros</span></h2>
+        <p class="lead">Algunos de los comercios en Puerto Rico que han confiado en nuestras soluciones de procesamiento.</p>
+      </div>
+      <div class="cards" style="grid-template-columns:repeat(auto-fit,minmax(260px,1fr))">
+        <article class="card reveal delay-1" style="text-align:center"><h3>Arecibo Home Design</h3><p>Comercio que confía en nuestras soluciones.</p></article>
+        <article class="card reveal delay-2" style="text-align:center"><h3>Paradise Ceramics</h3><p>Comercio que confía en nuestras soluciones.</p></article>
+        <article class="card reveal delay-3" style="text-align:center"><h3>GM &amp; More</h3><p>Comercio que confía en nuestras soluciones.</p></article>
+        <article class="card reveal delay-1" style="text-align:center"><h3>JM Aluminum</h3><p>Comercio que confía en nuestras soluciones.</p></article>
+        <article class="card reveal delay-2" style="text-align:center"><h3>Ace Hardware</h3><p>Comercio que confía en nuestras soluciones.</p></article>
+        <article class="card reveal delay-3" style="text-align:center"><h3>Y muchos más</h3><p>Comercios de distintos sectores en toda la isla que han optimizado sus costos con nosotros.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="proceso" style="background:#f4f8fc">
+    <div class="container">
+      <div class="section-head reveal">
+        <div class="kicker">Proceso de validación</div>
+        <h2>Simple, confidencial y directo.</h2>
+        <p class="lead">El primer paso es conocer cómo está funcionando actualmente tu procesamiento.</p>
+      </div>
+      <div class="process">
+        <div class="step reveal delay-1"><div class="num">1</div><strong>Evaluación confidencial</strong><span>Revisión de tu merchant statement.</span></div>
+        <div class="step reveal delay-2"><div class="num">2</div><strong>Análisis detallado</strong><span>Identificación de oportunidades.</span></div>
+        <div class="step reveal delay-3"><div class="num">3</div><strong>Propuesta personalizada</strong><span>Presentación de la alternativa.</span></div>
+        <div class="step reveal delay-1"><div class="num">4</div><strong>Piloto sin riesgo</strong><span>Validación de la solución.</span></div>
+        <div class="step reveal delay-2"><div class="num">5</div><strong>Implementación rápida</strong><span>Migración y capacitación.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contacto" class="contact">
+    <div class="container contact-grid">
+      <div class="reveal">
+        <div class="kicker" style="color:#c9141d">Comienza aquí</div>
+        <h2 style="color:#fff">¿Quieres saber cuánto podrías ahorrar?</h2>
+        <p>Envíanos tu merchant statement para realizar una evaluación confidencial y preparar una propuesta personalizada. Trabajo como agente autorizado de <strong>IMS Puerto Rico</strong>.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="https://wa.me/17875460205?text=Hola%20David%2C%20quiero%20enviar%20mi%20merchant%20statement%20para%20una%20evaluaci%C3%B3n%20confidencial." target="_blank" rel="noopener">Hablar por WhatsApp</a>
+          <a class="btn btn-ghost" href="tel:+17875460205">Llamar ahora</a>
+        </div>
+      </div>
+      <div class="contact-card reveal delay-2">
+        <div class="contact-item"><small>Agente autorizado</small><strong>David López · IMS Puerto Rico</strong></div>
+        <div class="contact-item"><small>Teléfono / WhatsApp Business</small><strong>787-546-0205</strong></div>
+        <div class="contact-item"><small>Email</small><strong>david@imspuertorico.com</strong></div>
+        <div class="contact-item"><small>Ubicación</small><strong>San Juan, Puerto Rico</strong></div>
+        <div class="contact-item"><small>Empresa</small><strong><a href="https://www.imspuertorico.com" target="_blank" rel="noopener" style="color:var(--red);font-weight:800">IMS Puerto Rico →</a></strong></div>
+      </div>
+    </div>
+  </section>
 </main>
 
 <footer>
   <div class="container footer-row">
-    <div><strong>ISLA MERCHANT SOLUTIONS</strong><br>Agente autorizado de IMS Puerto Rico · Optimización de costos de procesamiento</div>
+    <div><strong style="color:#ddd">ISLA MERCHANT SOLUTIONS</strong><br>Agente autorizado de IMS Puerto Rico · Optimización de costos de procesamiento</div>
     <div>© 2026 · David López · <a href="https://www.imspuertorico.com" target="_blank" rel="noopener" style="color:#c9141d">IMS Puerto Rico</a></div>
   </div>
 </footer>
 
-<a class="whatsapp" href="https://wa.me/17875460205?text=Hola%20David%2C%20vi%20la%20p%C3%A1gina%20de%20Isla%20Merchant%20Solutions%20y%20quiero%20m%C3%A1s%20informaci%C3%B3n." target="_blank" rel="noopener" aria-label="Abrir WhatsApp"><svg viewBox="0 0 32 32" width="30" height="30" aria-hidden="true"><path fill="currentColor" d="M19.11 17.23c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.25-.46-2.38-1.47-.88-.78-1.48-1.74-1.65-2.04-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.22 3.08c.15.2 2.1 3.2 5.09 4.49.71.31 1.27.5 1.7.64.72.23 1.37.2 1.89.12.58-.09 1.76-.72 2.01-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35M16.03 4.02a11.93 11.93 0 0 0-10.3 17.94L4 27.98l6.16-1.62A11.96 11.96 0 1 0 16.03 4.02m0 21.84c-1.86 0-3.68-.5-5.27-1.45l-.38-.23-3.66.96.98-3.56-.25-.4a9.9 9.9 0 1 1 8.58 4.68"/></svg></a>
+<a class="whatsapp" href="https://wa.me/17875460205?text=Hola%20David%2C%20vi%20la%20p%C3%A1gina%20de%20Isla%20Merchant%20Solutions%20y%20quiero%20m%C3%A1s%20informaci%C3%B3n." target="_blank" rel="noopener" aria-label="Abrir WhatsApp">
+  <svg viewBox="0 0 32 32" width="28" height="28" aria-hidden="true"><path fill="currentColor" d="M19.11 17.23c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.25-.46-2.38-1.47-.88-.78-1.48-1.74-1.65-2.04-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.22 3.08c.15.2 2.1 3.2 5.09 4.49.71.31 1.27.5 1.7.64.72.23 1.37.2 1.89.12.58-.09 1.76-.72 2.01-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35M16.03 4.02a11.93 11.93 0 0 0-10.3 17.94L4 27.98l6.16-1.62A11.96 11.96 0 1 0 16.03 4.02m0 21.84c-1.86 0-3.68-.5-5.27-1.45l-.38-.23-3.66.96.98-3.56-.25-.4a9.9 9.9 0 1 1 8.58 4.68"/></svg>
+</a>
 
+<script>
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) entry.target.classList.add('visible');
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -30px 0px' });
+  reveals.forEach(el => observer.observe(el));
+  document.querySelectorAll('.hero .reveal').forEach(el => {
+    setTimeout(() => el.classList.add('visible'), 100);
+  });
+</script>
 </body>
 </html>
